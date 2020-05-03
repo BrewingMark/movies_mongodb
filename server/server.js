@@ -13,7 +13,7 @@ MongoClient.connect('mongodb://localhost:27017')
   const db = client.db('movies_hub');
   const moviesCollection = db.collection('movies');
   const moviesRouter = createRouter(moviesCollection);
-  app.use('/api/movies', movieRouter);
+  app.use('/api/movies', moviesRouter);
 })
 .catch(console.error);
 
